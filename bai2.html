@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        /* gọi món ngay */
+        .btn_header {
+            border: 2px solid;
+            padding: 15px 30px;
+            color: #086050;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn_header:hover {
+            background-color: #086050;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* giá trị của chúng tôi */
+        .giaTri_1 {
+            font-size: 200%;
+            color: #086050;
+            font-weight: 800;
+            text-align: center;
+            line-height: 1.5px
+        }
+
+        .giaTri_2 {
+            text-align: center;
+            max-width: 400px;
+        }
+
+        /* đầu bếp */
+        .dauBep {
+            padding: 15px;
+        }
+
+        .thongtindauBep {
+            background-color: white;
+            padding: 5px 20px 5px;
+            line-height: 10px;
+            border-radius: 5%;
+        }
+
+        /* lời chúng thực */
+        .ngoiSao {
+            font-size: 175%;
+            color: #f5c25a;
+            margin-top: 25px;
+        }
+
+        .cmt {
+            font-size: 142%;
+            font-style: italic;
+            line-height: 36.33px;
+            padding: 0px 430px;
+            color: #707070;
+        }
+
+        /* đặt bàn */
+        .datBan {
+            height: 50px;
+            width: 500px;
+            padding-left: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="container" style="padding: 100px;">
+        <div>
+            <img src="https://demo81.vuawebnhanh.vn/uploads/1577/category_option/2024-08-13/h2-shape-2-3402.webp">
+        </div>
+        <div style="margin-left: 20px;">
+            <p style="font-size: 130%;">Giới thiệu về chúng tôi</p>
+            <p style="color: #086050; font-size: 230%; font-weight: 800;">
+                NƠI THỰC PHẨM CHẤT LƯỢNG KẾT HỢP VỚI DỊCH VỤ TUYỆT VỜI </p>
+            <p style="font-size: 140%; color: #999; margin-bottom: 60px;">
+                Hãy đắm mình vào hành trình ẩm thực với thực đơn giới thiệu sự kết
+                hợp hương vị. Các đầu bếp của chúng
+                tôi sử dụng những nguyên liệu tốt nhất để tạo ra những món ăn không chỉ là bữa ăn mà còn là trải nghiệm
+                khó quên.</p>
+            <a class="btn_header">Gọi món ngay <i class="fa-brands fa-jedi-order"></i></a>
+        </div>
+    </div>
+    <!-- Giá trị của chúng tôi -->
+    <div style="background-color: rgb(248, 237, 224);">
+        <div style="text-align: center; padding: 40px;">
+            <p style="font-size: 175%; font-weight: 600">Giá trị của chúng tôi</p>
+            <p style="font-size: 250%; color: #086050; font-weight: 800">THƯỞNG THỨC BURGER CỦA CHÚNG TÔI</p>
+        </div>
+        <div class="container">
+            <div class="giaTri">
+                <p class="giaTri_1">THỊT BÒ</p>
+                <p class="giaTri_2">Lorem, ipsum dolor sit amet consectetur alorem eta ccusantium,nimi limils alias
+                    pariatur!</p>
+                <p class="giaTri_1" style="margin-top: 200px;">BÁNH MÌ</p>
+                <p class="giaTri_2">Lorem, ipsum dolor sit amet consectetur alorem et accusantium,nimi limils alias
+                    pariatur!</p>
+            </div>
+            <!--  -->
+            <div>
+                <img src="https://demo81.vuawebnhanh.vn/uploads/1577/category_option/2024-08-13/burger-home-3-4959.webp"
+                    style="width: 620px;">
+            </div>
+            <!--  -->
+            <div class="giaTri">
+                <p class="giaTri_1">CÁC LOẠI RAU</p>
+                <p class="giaTri_2">Lorem, ipsum dolor sit amet consectetur alorem et accusantium,nimi limils alias
+                    pariatur!</p>
+                <p class="giaTri_1" style="margin-top: 200px"> CAY</p>
+                <p class="giaTri_2">Lorem, ipsum dolor sit amet consectetur alorem etaccusantium,nimi limils alias
+                    pariatur!</p>
+            </div>
+        </div>
+    </div>
+    <!-- Giao Hàng -->
+    <div class="container" style="padding: 100px;">
+        <!-- trái -->
+        <div style="max-width: 630px;">
+            <p style="font-size: 130%; line-height: 1px;">Giao hàng</p>
+            <p style="color: #086050; font-size: 230%; font-weight: 800;">NƠI THỨC ĂN NGON KẾT HỢP VỚI DỊCH VỤ GIAO HÀNG
+                NHANH</p>
+            <p style="font-size: 120%;">Hãy đắm mình vào hành trình ẩm thực với thực đơn giới thiệu sự kết hợp hương vị.
+                Các đầu bếp của chúng
+                tôi sử dụng những nguyên liệu tốt nhất để tạo ra những món ăn không chỉ là bữa ăn mà còn là trải nghiệm
+                khó quên.</p>
+            <div class="container">
+                <div>
+                    <p style="font-size: 114%; padding: 25px 30px; background: #fbf7ef;"><i
+                            class="fa-solid fa-check"></i> Giao hàng trong 30 phút</p>
+                    <p style="font-size: 114%; padding: 25px 30px; background: #fbf7ef;"><i
+                            class="fa-solid fa-check"></i> Giao hàng tận nơi</p>
+                </div>
+                <div style="margin-left: 10px;">
+                    <p style="font-size: 114%; padding: 25px 30px; background: #fbf7ef;"><i
+                            class="fa-solid fa-check"></i> Miễn phí vận chuyển $50.000</p>
+                    <p style="font-size: 114%; padding: 25px 30px; background: #fbf7ef;"><i
+                            class="fa-solid fa-check"></i> Trên đường theo dõi</p>
+                </div>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div>
+            <img src="https://demo81.vuawebnhanh.vn/uploads/1577/category_option/2024-08-13/delivery-1-2844.webp"
+                style="width: 100%;">
+        </div>
+    </div>
+    <!-- Đầu bếp chuyên nghiệp -->
+    <div style="background-color: rgb(248, 237, 224); padding-top: 70px; padding-bottom: 50px;">
+        <div style="text-align: center;">
+            <p style="font-size: 130%;">Đầu bếp chuyên nghiệp</p>
+            <p style="font-size: 230%; font-weight: 800;">GẶP GỠ ĐẦU BẾP CHUYÊN NGHIỆP CỦA <br> CHÚNG TÔI</p>
+        </div>
+        <div class="container" style="max-width: 1290px; margin-left: 100px;">
+            <div class="dauBep">
+                <img src="https://demo81.vuawebnhanh.vn/uploads/1577/category_option/2024-08-13/team-2-5-2606.webp?v=1.0.01"
+                    style="border-radius: 5%;">
+                <div class="thongtindauBep">
+                    <p> <i class="fa-solid fa-grip-lines-vertical"></i> Đầu bếp cao cấp</p>
+                    <p style="font-size: 22px; color: #086050;">Rubina Jenny</p>
+                </div>
+            </div>
+            <div class="dauBep">
+                <img src="https://demo81.vuawebnhanh.vn/uploads/1577/category_option/2024-08-13/team-2-3-2719.webp?v=1.0.01"
+                    style="border-radius: 5%;">
+                <div class="thongtindauBep">
+                    <p> <i class="fa-solid fa-grip-lines-vertical"></i> Đầu bếp cao cấp</p>
+                    <p style="font-size: 22px; color: #086050;">Joseph Carter</p>
+                </div>
+            </div>
+            <div class="dauBep">
+                <img src="https://demo81.vuawebnhanh.vn/uploads/1577/category_option/2024-08-13/team-2-1-2836.webp?v=1.0.01"
+                    style="border-radius: 5%;">
+                <div class="thongtindauBep">
+                    <p> <i class="fa-solid fa-grip-lines-vertical"></i> Đầu bếp cao cấp</p>
+                    <p style="font-size: 22px; color: #086050;">Gia Minh</p>
+                </div>
+            </div>
+            <div class="dauBep">
+                <img src="https://demo81.vuawebnhanh.vn/uploads/1577/category_option/2024-08-13/team-2-5-2910.webp?v=1.0.01"
+                    style="border-radius: 5%;">
+                <div class="thongtindauBep">
+                    <p> <i class="fa-solid fa-grip-lines-vertical"></i> Đầu bếp cao cấp</p>
+                    <p style="font-size: 22px; color: #086050;">Rubina Jenny</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Lời chứng thực -->
+    <div style="text-align: center; padding: 40px;">
+        <p style="font-size: 130%;">Lời chứng thực</p>
+        <p style="color: #086050; font-size: 230%; font-weight: 800;">KHÁCH HÀNG ĐÃ NÓI GÌ</p>
+        <div class="container" style="justify-content: center;">
+            <div>
+                <img src="https://demo81.vuawebnhanh.vn/uploads/1577/category_option/2024-08-13/7-4721.webp"
+                    style="border-radius: 50%; margin-right: 30px;">
+            </div>
+            <div>
+                <p style="font-size: 150%; line-height: 1px;">John Doe</p>
+                <p style="color: #707070;">Gần đây</p>
+            </div>
+        </div>
+        <div class="ngoiSao">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="cmt">"Tôi thực sự bị cuốn hút. Tôi cũng muốn cảm ơn toàn thể nhân viên của bạn. Thật sự tuyệt vời."
+        </p>
+    </div>
+    <!-- Đặt bàn -->
+    <div style="background-color:rgb(248, 237, 224);">
+        <div style="background: url(https://demo81.vuawebnhanh.vn/uploads/1577/form/2024-08-13/booking-bg-2-1930.webp); background-size: cover;">
+            <div style="padding: 80px;">
+                <p style="font-size: 275%; color: white; font-weight: 700;">ĐẶT BÀN</p>
+                <input type="text" class="datBan" placeholder="Họ & Tên"><br>
+                <input type="date" class="datBan"><br>
+                <input type="text" class="datBan" placeholder="SĐT"><br>
+                <textarea type="text" placeholder="Nội dung" class="datBan" style="height: 100px;"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
