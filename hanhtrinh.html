@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hành Trình</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero-section {
+      position: relative;
+      background-image: url('your-image.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+
+    /* body */
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f5f0;
+      color: #4a4a4a;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .image-section img {
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20%;
+    }
+
+    .content-section {
+      max-width: 50%;
+      padding: 20px;
+    }
+
+    .content-section h1 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 2.5rem;
+      color: #8b5a2b;
+      margin-bottom: 20px;
+    }
+
+    .content-section p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .content-section button {
+      background-color: #8b5a2b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .content-section button:hover {
+      background-color: #6e4520;
+    }
+
+    /* khám pá địa phương */
+    .section-title {
+      text-align: center;
+      font-family: 'Brush Script MT', cursive;
+      font-size: 2.5rem;
+      color: #5c3d2e;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      border: none;
+    }
+
+    .card img {
+      border-radius: 10px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #5c3d2e;
+      margin-top: 15px;
+    }
+
+    .card-text {
+      color: #6c757d;
+      font-size: 0.95rem;
+    }
+
+    .btn-read-more {
+      color: #5c3d2e;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn-read-more:hover {
+      text-decoration: underline;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #5c3d2e;
+      border-radius: 50%;
+    }
+
+    /* trải nghiệm */
+    .hero-section {
+      position: relative;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 3rem;
+      color: #5c3d2e;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #5c3d2e;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      background-color: #5c3d2e;
+      border-color: #5c3d2e;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 30px;
+    }
+
+    .btn-primary:hover {
+      background-color: #462f20;
+      border-color: #462f20;
+    }
+
+    .floating-icons {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 3;
+    }
+
+    .floating-icons a {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .floating-icons a img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .footer-section {
+      background-image: url('footer-background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #333;
+      padding: 40px 0;
+    }
+
+    .footer-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #000;
+    }
+
+    .footer-content {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #5c3d2e;
+      margin-bottom: 20px;
+    }
+
+    .footer-social-icons a {
+      color: #5c3d2e;
+      font-size: 1.2rem;
+      margin-right: 15px;
+    }
+
+    .footer-social-icons a:hover {
+      color: #462f20;
+    }
+
+    .footer-link {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+
+    /* link  html*/
+    .kk {
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text !important;
+      background: -webkit-linear-gradient(200deg, #cb80ab, #0d296b);
+      background: linear-gradient(250deg, #cb80ab, #101010);
+    }
+
+    /* *** */
+    .navbar-brand img {
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="./Capture.PNG" alt="Logo">
+        <span class="ms-2 fw-bold">OHAYO Onsen & Spa</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <div class="kk p-3">
+            <a href="menu.html" id="kk">
+              <h4>Osen Menu</h4>
+            </a>
+          </div>
+          <div class="kk p-3">
+            <a href="khampha.html" id="kk">
+              <h4>Khám phá</h4>
+            </a>
+          </div>
+          <div class="kk p-3">
+            <a href="hanhtrinh.html" id="kk">
+              <h4>Hành trình</h4>
+            </a>
+          </div>
+          <div class="kk p-3">
+            <a href="uudai.html" id="kk">
+              <h4>Ưu đãi</h4>
+            </a>
+          </div>
+          <div class="kk p-3">
+            <a href="tintuc.html" id="kk">
+                <h4>Tin tức</h4>
+            </a>
+        </div>
+          <div class="kk p-3">
+            <a href="lienhe.html" id="kk">
+              <h4>Liên hệ</h4>
+            </a>
+          </div>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end -->
+  <!-- star -->
+  <div class="container-fluid">
+    <div class="bg-body"
+      style="background: url(https://ohayo-onsen.com/wp-content/uploads/2023/02/banner-ohayo-7.jpg); background-size: cover; width: 100%;;">
+      <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content p-5">
+          <h1 class="hero-title" style="color: rgb(237, 239, 242);">Hành Trình</h1>
+          <p class="hero-subtitle" style="color:  rgb(237, 239, 242);">Trang chủ | Hành trình</p>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- end -->
+  <!-- body -->
+  <div class="container-fluid" style="background: #f0e7d7;">
+    <div class="container">
+      <div class="image-section p-0">
+        <img src="https://ohayo-onsen.com/wp-content/themes/ohayo/images/dv_dichuyen.jpg." width="100%"
+          alt="Xe và máy bay">
+      </div>
+      <div class="content-section">
+        <h1>Dịch vụ di chuyển</h1>
+        <p>
+          Tại OHAYO Onsen & Spa, quý khách không chỉ được tận hưởng dịch vụ chất lượng cao, mà còn được sử dụng các dịch
+          vụ đưa đón, vận tải vô cùng chuyên nghiệp. Bao gồm: Đưa đón trả phí đến Thanh Thủy với chi phí tốt nhất, bãi
+          đỗ xe miễn phí cho khách du lịch. Lựa chọn OHAYO Onsen & Spa, du khách sẽ cảm nhận được sự chuyên nghiệp ngay
+          khi đặt chân đến với miền đất Tổ!
+        </p>
+        <button>Tìm hiểu thêm</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="img-fluid">
+      <img src="https://ohayo-onsen.com/wp-content/themes/ohayo/images/video_kham_pha.jpg" alt="" width="100%">
+    </div>
+  </div>
+  <!-- end -->
+  <div class="container-fluid" style="background: #f0e7d7;">
+    <div class="row">
+      <div class="col-6">
+        <h2 style="padding: 50px;">bản đồ nội khu</h2>
+        <p class="ms-5">Khám phá không gian, cảnh quan và các hoạt động tại OHAYO Onsen & Spa để chuyến đi nghỉ thêm
+          phần ý nghĩa!</p>
+        <p class="ms-5">Khám phá không gian, cảnh quan và các hoạt động tại OHAYO Onsen & Spa để chuyến đi nghỉ thêm
+          phần ý nghĩa!</p>
+      </div>
+      <div class="col-6">
+        <img src="https://ohayo-onsen.com/wp-content/themes/ohayo/images/ohayo_map.png" width="100%" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- khampha -->
+  <div class="container-fluid" style="background: #f0e7d7;">
+    <h2 class="ms-5">KHÁM PHÁ OHAYO</h2>
+    <section class="py-5">
+      <div class="container">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://ohayo-onsen.com/wp-content/uploads/2023/01/truong-tho-1-1-1024x666.jpg"
+                    class="img-fluid" alt="Kiến thức về Onsen">
+                  <div class="card-body">
+                    <h5 class="card-title">Kiến thức về Onsen</h5>
+                    <p class="card-text">Tắm Onsen là gì? Onsen (Ôn tuyền) là tên gọi khác của suối nước nóng...</p>
+                    <a href="#" class="btn-read-more">Tìm hiểu thêm</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://ohayo-onsen.com/wp-content/uploads/2023/04/Shutterstock-1832595499-1024x683.jpg"
+                    class="img-fluid" alt="Hành trình chữa lành Thân – Tâm – Trí">
+                  <div class="card-body">
+                    <h5 class="card-title">Hành trình chữa lành Thân – Tâm – Trí</h5>
+                    <p class="card-text">Xã hội ngày càng phát triển, con người ngày càng bị cuốn vào vòng xoay...</p>
+                    <a href="#" class="btn-read-more">Tìm hiểu thêm</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://ohayo-onsen.com/wp-content/uploads/2023/01/da-quy.jpg" class="img-fluid"
+                    alt="Những điều cần biết về xông khô Sauna">
+                  <div class="card-body">
+                    <h5 class="card-title">Những điều cần biết về xông khô Sauna</h5>
+                    <p class="card-text">Nguồn gốc của xông khô: Sauna hay còn gọi là xông hơi khô là phương pháp...</p>
+                    <a href="#" class="btn-read-more">Tìm hiểu thêm</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- end -->
+  <!-- trainghiem -->
+  <div class="bg"
+    style="background-image: url(https://lh7-us.googleusercontent.com/fKJCxsNmtwKBg-wgGK4vDu_ZS3GIAP18qTycmN4QlUU2MccaWZG_7968rHGXrg1mg35tCwS7mBQvomV2LdbrioONEv-iSyyv83YmBeHCOFUIrv0bL5aTv--sgfpjY5oyfjy2SJqLNCtSO1VSIGcRnoE); background-size: cover;">
+    <section class="hero-section">
+      <div class="hero-content p-5 mb-auto">
+        <h1 style="color: rgb(237, 239, 242);;">Trải nghiệm ngay</h1>
+        <p style="color: rgb(237, 239, 242);;">Tận hưởng không gian chuẩn Nhật với ưu đãi tốt nhất!</p>
+        <a href="#" class="btn btn-primary">Đặt Dịch Vụ</a>
+      </div>
+    </section>
+  </div>
+  <!-- end -->
+  <!-- footer -->
+  <footer class="footer-section text-center text-md-start"
+    style="background: url(https://holidayonwight.com/wp-content/uploads/2021/04/cropped-Holiday-on-SPA-BG-2560.jpg); background-size: cover; ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5 class="footer-title">GIỚI THIỆU</h5>
+          <p class="footer-content">
+            Mang theo dấu ấn văn hoá Onsen Nhật Bản, OHAYO Onsen & Spa với nguồn khoáng nóng Thanh Thuỷ – món quà đặc
+            ân
+            của tạo hoá với tính chất Radon quý hiếm, duy trì ở mức nhiệt lý tưởng, sẽ trao tặng cho du khách hành
+            trình
+            nuôi dưỡng và chăm sóc thân – tâm – trí từ sâu trong tâm hồn: Tắm khoáng nóng – Xông khô – Spa – Trị liệu
+            toàn diện.
+          </p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="footer-title">LIÊN KẾT NHANH</h5>
+          <ul class="list-unstyled footer-content">
+            <li><a href="#" class="footer-link">Factsheet</a></li>
+            <li><a href="#" class="footer-link">Q&A</a></li>
+            <li><a href="#" class="footer-link">Chính sách bảo mật</a></li>
+            <li><a href="#" class="footer-link">Chính sách thanh toán</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="footer-title">LIÊN HỆ</h5>
+          <p class="footer-content">
+            Địa chỉ: Bảo Yên, Thanh Thuỷ, Phú Thọ, Việt Nam<br>
+            Điện thoại: 0210 627 9955<br>
+            Email: cskh@ohayo-onsen.com / Booking@ohayo-onsen.com<br><br>
+            Tập đoàn Onsen Fuji<br>
+            Tầng 5 – 6 toà nhà Ngọc Khánh, Số 1 Phạm Huy Thông, Phường Ngọc Khánh, Quận Ba Đình, Hà Nội<br>
+            MST: 0108486106
+          </p>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <div class="footer-logo"><span class="fw-normal"></span></div>
+        <div class="footer-social-icons">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end -->
+</body>
+
+</html>
