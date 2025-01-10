@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ohayo Menu</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      background: url('background.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .navbar-brand img {
+      height: 50px;
+    }
+
+    .btn-book {
+      background-color: #5c3d2e;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .btn-book:hover {
+      background-color: #4a3223;
+    }
+
+    .image-gallery {
+      padding: 50px 0;
+    }
+
+    .image-gallery h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .image-gallery .card {
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .image-gallery .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .image-gallery .card-title {
+      margin: 15px 0 10px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* osensuckhoe */
+    .section-title {
+      text-align: center;
+      font-family: 'Brush Script MT', cursive;
+      font-size: 2.5rem;
+      color: #5c3d2e;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      border: none;
+    }
+
+    .card img {
+      border-radius: 10px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #5c3d2e;
+      margin-top: 15px;
+    }
+
+    .card-text {
+      color: #6c757d;
+      font-size: 0.95rem;
+    }
+
+    .btn-read-more {
+      color: #5c3d2e;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn-read-more:hover {
+      text-decoration: underline;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #5c3d2e;
+      border-radius: 50%;
+    }
+
+    /* trainghiem */
+    .hero-section {
+      position: relative;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 3rem;
+      color: #5c3d2e;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #5c3d2e;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      background-color: #5c3d2e;
+      border-color: #5c3d2e;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 30px;
+    }
+
+    .btn-primary:hover {
+      background-color: #462f20;
+      border-color: #462f20;
+    }
+
+    .floating-icons {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 3;
+    }
+
+    .floating-icons a {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .floating-icons a img {
+      width: 25px;
+      height: 25px;
+    }
+
+    /* footer */
+    .footer-section {
+      background-image: url('footer-background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #333;
+      padding: 40px 0;
+    }
+
+    .footer-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #000;
+    }
+
+    .footer-content {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #5c3d2e;
+      margin-bottom: 20px;
+    }
+
+    .footer-social-icons a {
+      color: #5c3d2e;
+      font-size: 1.2rem;
+      margin-right: 15px;
+    }
+
+    .footer-social-icons a:hover {
+      color: #462f20;
+    }
+
+    .footer-link {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+
+    /* link html */
+
+    .kk {
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text !important;
+      background: -webkit-linear-gradient(200deg, #cb80ab, #0d296b);
+      background: linear-gradient(250deg, #cb80ab, #101010);
+    }
+
+    /* btn */
+    /* From Uiverse.io by Mike11jr */ 
+.scene {
+ width: 10em;
+ justify-content: center;
+ align-items: center;
+}
+
+.cube {
+ color: #ccc;
+ cursor: pointer;
+ font-family: 'Roboto', sans-serif;
+ transition: all 0.85s cubic-bezier(.17,.67,.14,.93);
+ transform-style: preserve-3d;
+ transform-origin: 100% 50%;
+ width: 10em;
+ height: 4em;
+}
+
+.cube:hover {
+ transform: rotateX(-90deg);
+}
+
+.side {
+ box-sizing: border-box;
+ position: absolute;
+ display: inline-block;
+ height: 4em;
+ width: 10em;
+ text-align: center;
+ text-transform: uppercase;
+ padding-top: 1.5em;
+ font-weight: bold;
+}
+
+.top {
+ background: wheat;
+ color: #222229;
+ transform: rotateX(90deg) translate3d(0, 0, 2em);
+ box-shadow: inset 0 0 0 5px #fff;
+}
+
+.front {
+ background: #a9a9c9;
+ color: #fff;
+ box-shadow: inset 0 0 0 5px #fff;
+ transform: translate3d(0, 0, 2em);
+}
+/* LIKE */
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+  width: 140px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.leftContainer {
+  width: 60%;
+  height: 100%;
+  background-color: rgb(238, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.leftContainer .like {
+  color: white;
+  font-weight: 600;
+}
+
+.likeCount {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(238, 0, 0);
+  font-weight: 600;
+  position: relative;
+  background-color: white;
+}
+
+.likeCount::before {
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  content: "";
+  background-color: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  left: -4px;
+}
+
+.Btn:hover .leftContainer {
+  background-color: rgb(219, 0, 0);
+}
+
+.Btn:active .leftContainer {
+  background-color: rgb(201, 0, 0);
+}
+
+.Btn:active .leftContainer svg {
+  transform: scale(1.15);
+  transform-origin: top;
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="./Capture.PNG" alt="Logo">
+        <span class="ms-2 fw-bold">OHAYO Onsen & Spa</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <div class="kk p-3">
+            <a href="index.html" id="kk">
+              <h4>Osen Menu</h4>
+            </a>
+          </div>
+          <div class="kk p-3">
+            <a href="khampha.html" id="kk">
+              <h4>Khám phá</h4>
+            </a>
+          </div>
+          <div class="kk p-3">
+            <a href="hanhtrinh.html" id="kk">
+              <h4>Hành trình</h4>
+            </a>
+          </div>
+          <div class="kk p-3">
+            <a href="uudai.html" id="kk">
+              <h4>Ưu đãi</h4>
+            </a>
+          </div>
+          <div class="kk p-3">
+            <a href="tintuc.html" id="kk">
+              <h4>Tin tức</h4>
+            </a>
+          </div>
+          <div class="kk p-3">
+            <a href="lienhe.html" id="kk">
+              <h4>Liên hệ</h4>
+            </a>
+          </div>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="bg-body"
+      style="background-image: url(https://ohayo-onsen.com/wp-content/uploads/2023/02/banner-ohayo-7.jpg)  ;">
+      <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content p-5">
+          <h1 class="hero-title" style="color: rgb(237, 239, 242);">OHAYO MENU</h1>
+          <p class="hero-subtitle" style="color:  rgb(237, 239, 242);">Trang chủ | Khám phá</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Gallery Section -->
+  <section class="image-gallery">
+    <div class="container">
+      <div class="row g-4 p-3">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://ohayo-onsen.com/wp-content/uploads/2023/12/BANNER2-276x400-1.png" alt="Image 1">
+            <div class="card-body">
+              <!-- btn -->
+              <div class="scene">
+                <div class="cube">
+                  <span class="side top">Đặt ngay</span>
+                  <span class="side front">Ohayo +1</span>
+                </div>
+              </div>
+              <!-- btn-->
+              <p> + Natural Onsen</p>
+              <p> + Theme Onsen</p>
+              <p> + Foot Hous</p>
+              <!--  -->
+<button class="Btn">
+  <span class="leftContainer">
+    <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+    <span class="like">Like</span>
+  </span>
+  <span class="likeCount">
+    2,050
+  </span>
+</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://ohayo-onsen.com/wp-content/uploads/2023/09/Trang-chu-3-1.png" alt="Image 2">
+            <div class="card-body">
+             <!-- btn -->
+              <div class="scene">
+                <div class="cube">
+                  <span class="side top">Đặt ngay</span>
+                  <span class="side front">Ohayo KID</span>
+                </div>
+              </div>
+              <!-- btn -->
+              <p> + Natural Onsen</p>
+              <p> + Theme Onsen</p>
+              <p> + Foot Hous</p>
+              <!--  -->
+              <button class="Btn">
+                <span class="leftContainer">
+                  <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                  <span class="like">Like</span>
+                </span>
+                <span class="likeCount">
+                  4,268
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://ohayo-onsen.com/wp-content/uploads/2023/09/Trang-chu-2-1.png" alt="Image 3">
+            <div class="card-body">
+              <!-- btn -->
+              <div class="scene">
+                <div class="cube">
+                  <span class="side top">Đặt ngay</span>
+                  <span class="side front">Ohayo VIP</span>
+                </div>
+              </div>
+              <!-- btn -->
+              <p> + Natural Onsen</p>
+              <p> + Theme Onsen</p>
+              <p> + Foot Hous</p>
+              <!--  -->
+              <button class="Btn">
+                <span class="leftContainer">
+                  <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                  <span class="like">Like</span>
+                </span>
+                <span class="likeCount">
+                  5,986
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <img src="https://ohayo-onsen.com/wp-content/themes/ohayo/images/thanhthuy_2.jpg" alt="Image 3">
+            <div class="card-body">
+              <!-- btn -->
+                <div class="scene">
+                  <div class="cube">
+                    <span class="side top">Đặt ngay</span>
+                    <span class="side front">Ohayo Unlimited</span>
+                  </div>
+                </div>
+                <!-- btn -->
+              <p>+ Gồm tất cả dịch vụ OHAYO trong 24h</p>
+              <p>+ Thư giãn Tatami</p>
+              <p>+ Natural Onsen</p>
+              <!--  -->
+              <button class="Btn">
+                <span class="leftContainer">
+                  <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                  <span class="like">Like</span>
+                </span>
+                <span class="likeCount">
+                  3,326
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" >
+          <div class="card">
+            <img src="https://ohayo-onsen.com/wp-content/themes/ohayo/images/thanhthuy_1.jpg" alt="Image 3">
+            <div class="card-body">
+              <!-- btn -->
+                <div class="scene">
+                  <div class="cube">
+                    <span class="side top">Đặt ngay</span>
+                    <span class="side front">Ohayo Private</span>
+                  </div>
+                </div>
+                <!-- btn -->
+              <p> + Osen Bath</p>
+              <p> + THerbal Steamn</p>
+              <p> + Trà đạo</p>
+              <!--  -->
+              <button class="Btn">
+                <span class="leftContainer">
+                  <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                  <span class="like">Like</span>
+                </span>
+                <span class="likeCount">
+                  2,035
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- osensuckhoe -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Onsen & Sức Khỏe</h2>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://ohayo-onsen.com/wp-content/uploads/2023/01/truong-tho-1-1-1024x666.jpg" width="100%"
+                    height="70px" class="img-fluid" alt="Kiến thức về Onsen">
+                  <div class="card-body">
+                    <h5 class="card-title">Kiến thức về Onsen</h5>
+                    <p class="card-text">Tắm Onsen là gì? Onsen (Ôn tuyền) là tên gọi khác của suối nước nóng...</p>
+                    <a href="#" class="btn-read-more">Tìm hiểu thêm</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card" style="width: 100%;">
+                  <img src="https://ohayo-onsen.com/wp-content/uploads/2023/04/Shutterstock-1832595499-1024x683.jpg"
+                    width="97%" height="50%" class="img-fluid" alt="Hành trình chữa lành Thân – Tâm – Trí">
+                  <div class="card-body">
+                    <h5 class="card-title">Hành trình chữa lành Thân – Tâm – Trí</h5>
+                    <p class="card-text">Xã hội ngày càng phát triển, con người ngày càng bị cuốn vào vòng xoay...</p>
+                    <a href="#" class="btn-read-more">Tìm hiểu thêm</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="https://ohayo-onsen.com/wp-content/uploads/2023/01/da-quy.jpg" width="93%" height="50%"
+                    alt="Những điều cần biết về xông khô Sauna">
+                  <div class="card-body">
+                    <h5 class="card-title">Những điều cần biết về xông khô Sauna</h5>
+                    <p class="card-text">Nguồn gốc của xông khô: Sauna hay còn gọi là xông hơi khô là phương pháp...</p>
+                    <a href="#" class="btn-read-more">Tìm hiểu thêm</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- trainghiem -->
+  <div class="bg"
+    style="background-image: url(https://lh7-us.googleusercontent.com/fKJCxsNmtwKBg-wgGK4vDu_ZS3GIAP18qTycmN4QlUU2MccaWZG_7968rHGXrg1mg35tCwS7mBQvomV2LdbrioONEv-iSyyv83YmBeHCOFUIrv0bL5aTv--sgfpjY5oyfjy2SJqLNCtSO1VSIGcRnoE); background-size: cover;">
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Trải nghiệm ngay</h1>
+        <p>Tận hưởng không gian chuẩn Nhật với ưu đãi tốt nhất!</p>
+        <a href="#" class="btn btn-primary">Đặt Dịch Vụ</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- end -->
+  <!--  star footer -->
+  <footer class="footer-section text-center text-md-start"
+    style="background: url(https://holidayonwight.com/wp-content/uploads/2021/04/cropped-Holiday-on-SPA-BG-2560.jpg); background-size: cover; ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5 class="footer-title">GIỚI THIỆU</h5>
+          <p class="footer-content">
+            Mang theo dấu ấn văn hoá Onsen Nhật Bản, OHAYO Onsen & Spa với nguồn khoáng nóng Thanh Thuỷ – món quà đặc ân
+            của tạo hoá với tính chất Radon quý hiếm, duy trì ở mức nhiệt lý tưởng, sẽ trao tặng cho du khách hành trình
+            nuôi dưỡng và chăm sóc thân – tâm – trí từ sâu trong tâm hồn: Tắm khoáng nóng – Xông khô – Spa – Trị liệu
+            toàn diện.
+          </p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="footer-title">LIÊN KẾT NHANH</h5>
+          <ul class="list-unstyled footer-content">
+            <li><a href="#" class="footer-link">Factsheet</a></li>
+            <li><a href="#" class="footer-link">Q&A</a></li>
+            <li><a href="#" class="footer-link">Chính sách bảo mật</a></li>
+            <li><a href="#" class="footer-link">Chính sách thanh toán</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="footer-title">LIÊN HỆ</h5>
+          <p class="footer-content">
+            Địa chỉ: Bảo Yên, Thanh Thuỷ, Phú Thọ, Việt Nam<br>
+            Điện thoại: 0210 627 9955<br>
+            Email: cskh@ohayo-onsen.com / Booking@ohayo-onsen.com<br><br>
+            Tập đoàn Onsen Fuji<br>
+            Tầng 5 – 6 toà nhà Ngọc Khánh, Số 1 Phạm Huy Thông, Phường Ngọc Khánh, Quận Ba Đình, Hà Nội<br>
+            MST: 0108486106
+          </p>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <div class="footer-logo">OHAYO <span class="fw-normal">Onsen & Spa</span></div>
+        <div class="footer-social-icons">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
